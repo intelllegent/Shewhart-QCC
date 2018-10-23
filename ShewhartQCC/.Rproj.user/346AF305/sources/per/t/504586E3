@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539245866914.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "713971240",
+    "id" : "504586E3",
+    "lastKnownWriteTime" : 1539784608,
+    "last_content_update" : 1539784608359,
+    "path" : "~/GitHub/ShewhartQCC/R/control_tests.R",
+    "project_path" : "R/control_tests.R",
+    "properties" : {
+        "cursorPosition" : "108,2",
+        "scrollLine" : "169"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

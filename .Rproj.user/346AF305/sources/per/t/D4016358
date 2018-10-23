@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539357612733.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D4016358",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1539357612733,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "71A9E6BE",
+        "caption" : "xaxis_val",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=xaxis_val&cache_key=71A9E6BE",
+        "displayedObservations" : 20,
+        "environment" : "",
+        "object" : "xaxis_val",
+        "preview" : 0,
+        "totalObservations" : 20,
+        "variables" : 1
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

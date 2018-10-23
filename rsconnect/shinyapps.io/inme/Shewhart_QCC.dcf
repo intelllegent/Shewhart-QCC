@@ -1,0 +1,13 @@
+name: Shewhart_QCC
+title: Shewhart_QCC
+username:
+account: inme
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 506822
+bundleId: 1647767
+url: https://inme.shinyapps.io/Shewhart_QCC/
+when: 1539787011.95364
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|buff.R|FRT Weekly Monitoting.xlsx|Plotly.R|Test.xlsx|ShewhartQCC

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539165344518.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3914240142",
+    "id" : "FA5C449B",
+    "lastKnownWriteTime" : 1539787287,
+    "last_content_update" : 1539787287228,
+    "path" : "~/GitHub/Shewhart QCC/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "cursorPosition" : "203,63",
+        "docOutlineVisible" : "0",
+        "scrollLine" : "187"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

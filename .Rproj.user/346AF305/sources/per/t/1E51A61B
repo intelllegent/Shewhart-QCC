@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539781992988.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1E51A61B",
+    "lastKnownWriteTime" : 8606223179761149039,
+    "last_content_update" : 1539781992988,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "context" : "namespace:ShewhartQCC:::Shewchart_5"
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_code_browser"
+}
