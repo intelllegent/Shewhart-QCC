@@ -4,17 +4,17 @@
     "created" : 1539165344518.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "3914240142",
+    "folds" : "7|43|12|0|\n14|44|19|0|\n21|54|33|0|\n35|34|41|0|\n43|37|47|0|\n50|50|80|0|\n82|56|126|0|\n128|40|160|0|\n162|40|191|0|\n193|56|254|0|\n256|56|364|0|\n366|56|385|0|\n387|56|403|0|\n419|71|435|2|\n",
+    "hash" : "3735271144",
     "id" : "FA5C449B",
-    "lastKnownWriteTime" : 1539787287,
-    "last_content_update" : 1539787287228,
+    "lastKnownWriteTime" : 1540566459,
+    "last_content_update" : 1540566459807,
     "path" : "~/GitHub/Shewhart QCC/server.R",
     "project_path" : "server.R",
     "properties" : {
-        "cursorPosition" : "203,63",
+        "cursorPosition" : "595,2",
         "docOutlineVisible" : "0",
-        "scrollLine" : "187"
+        "scrollLine" : "637"
     },
     "relative_order" : 2,
     "source_on_save" : false,

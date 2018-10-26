@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1539176995073.000,
+    "created" : 1540547646071.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1449061046",
-    "id" : "78DDE246",
-    "lastKnownWriteTime" : 1539094829,
-    "last_content_update" : 1539094829,
+    "hash" : "2343807571",
+    "id" : "51132DF5",
+    "lastKnownWriteTime" : 1540562800,
+    "last_content_update" : 1540562800380,
     "path" : "~/GitHub/Shewhart QCC/Plotly.R",
     "project_path" : "Plotly.R",
     "properties" : {
-        "cursorPosition" : "62,10",
+        "cursorPosition" : "4,0",
         "scrollLine" : "0"
     },
-    "relative_order" : 5,
+    "relative_order" : 3,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

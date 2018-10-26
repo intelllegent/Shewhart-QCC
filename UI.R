@@ -77,7 +77,18 @@ ui <- fluidPage(
     mainPanel(
       tabsetPanel(
         tabPanel("Plot", plotlyOutput("plotly")),
-        tabPanel("Summary", textOutput("text")),
+   #     shinyjs::hidden(
+        tabPanel("Shewhart Tests", 
+                 h5(textOutput("Titl")),
+                 tableOutput("trash_1"), hr(),
+                 tableOutput("trash_2"), hr(),
+                 verbatimTextOutput("trash_3"), hr(),
+                 verbatimTextOutput("trash_4"), hr(),
+                 verbatimTextOutput("trash_5"), hr(),
+                 verbatimTextOutput("trash_6"), hr(),
+                 verbatimTextOutput("trash_7"), hr(),
+                 verbatimTextOutput("trash_8"), hr()
+                 ),
         tabPanel("Summary Table", dataTableOutput("tbl"))
       )
     )

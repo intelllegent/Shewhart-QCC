@@ -1,0 +1,21 @@
+
+library(tidyr) 
+library(readxl)
+library(plotly)
+
+dd <- read_xlsx("Test.xlsx")
+df <- tibble(point = dd$Date, value = dd$Samp)
+df_1 <- tibble(point = dd$Date[c(1,20)], value = dd$Samp[c(1,20)])
+p <- plot_ly(data = df,
+             x = ~point,
+             y = ~value,
+             type = 'scatter',
+             mode = 'lines+markers')
+p <- add_markers(p=p,
+                 data = df_1,
+                 x = ~point,
+                 y = ~value,
+                 type = 'scatter',
+                 mode = 'markers',
+                 color = I('red'))
+p
