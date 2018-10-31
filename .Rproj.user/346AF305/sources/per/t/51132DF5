@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2343807571",
+    "hash" : "2443046403",
     "id" : "51132DF5",
-    "lastKnownWriteTime" : 1540562800,
-    "last_content_update" : 1540562800380,
+    "lastKnownWriteTime" : 1540911361,
+    "last_content_update" : 1540911361966,
     "path" : "~/GitHub/Shewhart QCC/Plotly.R",
     "project_path" : "Plotly.R",
     "properties" : {
-        "cursorPosition" : "4,0",
+        "cursorPosition" : "99,20",
         "scrollLine" : "0"
     },
     "relative_order" : 3,

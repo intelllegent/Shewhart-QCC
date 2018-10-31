@@ -404,6 +404,7 @@ Shewchart_8 <- function(table, sample, average, sigma) {
 }
 
 add_trash <- function(plot, table, label) {
+  if (!is.null(table)){
   pl <- add_markers(
     p = plot,
     x = table$point,
@@ -411,10 +412,19 @@ add_trash <- function(plot, table, label) {
     name = label,
     type = 'scatter',
     mode = 'markers',
-    hoverinfo  = 'text+name',
     color = I('red')
   )
-  return(pl)
+  return(pl)} else{
+    return(plot)
+    }
+}
+
+view_trash <- function(data, output){
+  if (!is.null(data)){
+    output$data <- renderTable(
+      data
+    )
+  }
 }
 
 get_column_name <-  function(names, choice, datapath, type = "guess") {
@@ -453,17 +463,32 @@ create_plot <- function(table,
                         shew_5 = trash_5,
                         shew_6 = trash_6,
                         shew_7 = trash_7,
-                        shew_8 = trash_8) {
+                        shew_8 = trash_8
+                        ) {
   p <- plot_ly(
     name = seq_name,
     data = table,
     type = 'scatter',
     mode = plot_mode,
-    text = text,
-    hoverinfo  = 'text+name',
+    # text = text,
+    # hoverinfo  = 'text+name',
     x = ~ point,
     y = ~ value
   )
+  if (shewh == TRUE){
+    print("Rule-loop:")
+    print(shew_1)
+    p <- add_trash(p, shew_1, "Test №1")
+    p <- add_trash(p, shew_2, "Test №2")
+    p <- add_trash(p, shew_3, "Test №3")
+    p <- add_trash(p, shew_4, "Test №4")
+    p <- add_trash(p, shew_5, "Test №5")
+    p <- add_trash(p, shew_6, "Test №6")
+    p <- add_trash(p, shew_7, "Test №7")
+    p <- add_trash(p, shew_8, "Test №8")
+    
+    print("Rule-loop end")
+  }
   
   p <- layout(
     p = p,
@@ -547,6 +572,7 @@ read_seq <<- NULL
 Aver_plt <<- NULL
 Sigm_plt <<- NULL
 
+
 trash_1 <<- NULL
 trash_2 <<- NULL
 trash_3 <<- NULL
@@ -598,11 +624,11 @@ server <- function(input, output, session) {
     if (is.null(read_seq)) {
       read_seq <<- get_column_name(col_names(), col_choice(), input$file1$datapath)
       num_seq <<- read_seq[[1]]
-      data_seq <<- tibble(point = 1:length(num_seq), value = num_seq)
+      data_seq <<- tibble(point = 1:length(na.omit(num_seq)), value = na.omit(num_seq))
     } else{
       xaxis_val <<- get_column_name(col_names(), col_choice(), input$file1$datapath)
       s_seq <<- xaxis_val[[1]]
-      data_seq <<- tibble(point = s_seq, value = num_seq)
+      data_seq <<- tibble(point = s_seq, value = na.omit(num_seq))
     }
     
     
@@ -639,38 +665,71 @@ server <- function(input, output, session) {
     output$plotly <- renderPlotly({
     create_plot(table = data_seq, text = point_info)
     })
-    view_data <- function(data){
-      if (!is.null(data)){
-      output$data <- renderTable(expr = data, colnames = FALSE)
-      insertUI("#Shewhart Tests", "afterEnd", tagList(hr(),hr(),hr()) )
-      }
+    
+    output$Titl <- renderText("Analisis Results:")
+    if (!is.null(trash_1)){
+      output$tr_1 <- renderText("Test №1:")
+      trash_1$point <-  as.character(trash_1$point)
+      output$trash_1 <- renderTable(expr = trash_1, colnames = FALSE)
+    } else {
+      output$tr_1 <- renderText("Test №1 - Passed")
     }
     
-    view_data(trash_1)
-    output$trash_1 <- renderTable(
-      trash_1
-    )
-    output$trash_2 <- renderTable(
-      trash_2
-    )
-    output$trash_3 <- renderPrint(
-      trash_3
-    )
-    output$trash_4 <- renderPrint(
-      trash_4
-    )
-    output$trash_5 <- renderPrint(
-      trash_5
-    )
-    output$trash_6 <- renderPrint(
-      trash_6
-    )
-    output$trash_7 <- renderPrint(
-      trash_7
-    )
-    output$trash_8 <- renderPrint(
-      trash_8
-    )
+    if (!is.null(trash_2)){
+      output$tr_2 <- renderText("Test №2:")
+      trash_2$point <-  as.character(trash_2$point)
+      output$trash_2 <- renderTable(expr = trash_2, colnames = FALSE)
+    } else {
+      output$tr_2 <- renderText("Test №2 - Passed")
+    }
+    
+    if (!is.null(trash_3)){
+      output$tr_3 <- renderText("Test №3:")
+      trash_3$point <-  as.character(trash_3$point)
+      output$trash_3 <- renderTable(expr = trash_3, colnames = FALSE)
+    } else {
+      output$tr_3 <- renderText("Test №3 - Passed")
+    }
+    
+    if (!is.null(trash_4)){
+      output$tr_4 <- renderText("Test №4:")
+      trash_4$point <-  as.character(trash_4$point)
+      output$trash_4 <- renderTable(expr = trash_4, colnames = FALSE)
+    } else {
+      output$tr_4 <- renderText("Test №4 - Passed")
+    }
+    
+    if (!is.null(trash_5)){
+      output$tr_5 <- renderText("Test №5:")
+      trash_5$point <-  as.character(trash_5$point)
+      output$trash_5 <- renderTable(expr = trash_5, colnames = FALSE)
+    } else {
+      output$tr_5 <- renderText("Test №5 - Passed")
+    }
+    
+    if (!is.null(trash_6)){
+      output$tr_6 <- renderText("Test №6:")
+      trash_6$point <-  as.character(trash_6$point)
+      output$trash_6 <- renderTable(expr = trash_6, colnames = FALSE)
+    } else {
+      output$tr_6 <- renderText("Test №6 - Passed")
+    }
+    
+    if (!is.null(trash_7)){
+      output$tr_7 <- renderText("Test №7:")
+      trash_7$point <-  as.character(trash_7$point)
+      output$trash_7 <- renderTable(expr = trash_7, colnames = FALSE)
+    } else {
+      output$tr_7 <- renderText("Test №7 - Passed")
+    }
+    
+    if (!is.null(trash_8)){
+      output$tr_8 <- renderText("Test №8:")
+      trash_8$point <-  as.character(trash_8$point)
+      output$trash_8 <- renderTable(expr = trash_8, colnames = FALSE)
+    } else {
+      output$tr_8 <- renderText("Test №8 - Passed")
+    }
   })
   
   shinyjs::onclick("form_table",
@@ -708,6 +767,31 @@ server <- function(input, output, session) {
     output$plotly <- renderPlotly({
       create_plot(table = data_seq, text = point_info)
     })
+  })
+  
+  observeEvent(input$help, {
+    showModal(modalDialog(
+      title = "Shewhart Tests",
+      renderTable(tibble("Test №" = c(1:8), Rule = c(
+        "1 point is outside the control limits.",
+        "8/9 points on the same size of the center line.",
+        "6 consecutive points are steadily increasing or decreasing.",
+        "14 consecutive points are alternating up and down.",
+        "2 out of 3 consecutive points are more than 2 sigmas from the center line in the same direction.",
+        "4 out of 5 consecutive points are more than 1 sigma from the center line in the same direction.",
+        "15 consecutive points are within 1 sigma of the center line.",
+        "8 consecutive points on either side of the center line with not within 1 sigma."),
+        "Problem indicated" = c(
+          "A large shift.",
+          "A small sustained shift",
+          "A trend or drift up or down.",
+          "Non-random systematic variation.",
+          "A medium shift.",
+          "A small shift.",
+          "Stratification.",
+          "A mixture pattern."))),
+      easyClose = TRUE
+    ))
   })
   #--- Конец сервера
 }

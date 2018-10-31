@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1540910827422.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3094164479",
+    "id" : "B19BF3F6",
+    "lastKnownWriteTime" : 1540912720,
+    "last_content_update" : 1540912720590,
+    "path" : "~/GitHub/Shewhart QCC/buff_1.R",
+    "project_path" : "buff_1.R",
+    "properties" : {
+        "cursorPosition" : "100,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

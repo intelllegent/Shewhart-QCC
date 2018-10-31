@@ -30,7 +30,9 @@ ui <- fluidPage(
             div(id = "plottools",
                 
                 actionButton("toggle_advanced", "Show/hide advanced menu",
-                             icon = icon("cog", lib = "glyphicon"))
+                             icon = icon("cog", lib = "glyphicon")),
+                actionButton("help", "Help info",
+                             icon = icon("question-sign", lib = "glyphicon"))
                 
                 ),
             
@@ -79,15 +81,23 @@ ui <- fluidPage(
         tabPanel("Plot", plotlyOutput("plotly")),
    #     shinyjs::hidden(
         tabPanel("Shewhart Tests", 
-                 h5(textOutput("Titl")),
+                 h4(textOutput("Titl")),
+                 h5(textOutput("tr_1")),
                  tableOutput("trash_1"), hr(),
+                 h5(textOutput("tr_2")),
                  tableOutput("trash_2"), hr(),
-                 verbatimTextOutput("trash_3"), hr(),
-                 verbatimTextOutput("trash_4"), hr(),
-                 verbatimTextOutput("trash_5"), hr(),
-                 verbatimTextOutput("trash_6"), hr(),
-                 verbatimTextOutput("trash_7"), hr(),
-                 verbatimTextOutput("trash_8"), hr()
+                 h5(textOutput("tr_3")),
+                 tableOutput("trash_3"), hr(),
+                 h5(textOutput("tr_4")),
+                 tableOutput("trash_4"), hr(),
+                 h5(textOutput("tr_5")),
+                 tableOutput("trash_5"), hr(),
+                 h5(textOutput("tr_6")),
+                 tableOutput("trash_6"), hr(),
+                 h5(textOutput("tr_7")),
+                 tableOutput("trash_7"), hr(),
+                 h5(textOutput("tr_8")),
+                 tableOutput("trash_8"), hr()
                  ),
         tabPanel("Summary Table", dataTableOutput("tbl"))
       )

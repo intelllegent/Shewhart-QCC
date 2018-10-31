@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "944496774",
     "id" : "C133FC87",
-    "lastKnownWriteTime" : 1540566023,
-    "last_content_update" : 1540566023688,
+    "lastKnownWriteTime" : 1540994714,
+    "last_content_update" : 1540994714892,
     "path" : "~/GitHub/Shewhart QCC/UI.R",
     "project_path" : "UI.R",
     "properties" : {
-        "cursorPosition" : "82,27",
-        "scrollLine" : "61"
+        "cursorPosition" : "16,28",
+        "scrollLine" : "64"
     },
     "relative_order" : 1,
     "source_on_save" : false,

@@ -5,9 +5,9 @@ account: inme
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 506822
-bundleId: 1647767
+bundleId: 1674357
 url: https://inme.shinyapps.io/Shewhart_QCC/
-when: 1539787011.95364
+when: 1540997419.0858
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: .RData|buff.R|FRT Weekly Monitoting.xlsx|Plotly.R|Test.xlsx|ShewhartQCC
+ignoredFiles: .gitattributes|.RData|buff.R|buff_1.R|FRT Weekly Monitoting.xlsx|Plotly.R|Test.xlsx|ShewhartQCC

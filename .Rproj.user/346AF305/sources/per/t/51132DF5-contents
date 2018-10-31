@@ -89,16 +89,21 @@ p <- plot_ly(data = values_first,
              text = val_text,
              hoverinfo  = 'text+name'
              )
-
-p <- add_trace(p=p,
-               x = A_Th_first$Date,
-               y = A_Th_first$Average_Thickness_nm,
-               name = 'Av_Thick',
-               type = 'scatter',
-               mode = 'lines+markers',
-               text = hov_text,
-               hoverinfo  = 'text+name'
-               )
+add_trash <- function(p, A_Th_first,hov_text, label) {
+  pl <- add_markers(
+    p = p,
+    x = A_Th_first$Date[1:3],
+    y = A_Th_first$Average_Thickness_nm[1:3],
+    name = label,
+    type = 'scatter',
+    mode = 'lines+markers',
+    text = hov_text,
+    hoverinfo  = 'text+name',
+    color = I('red')
+  )
+  return(pl)
+}
+p <- add_trash(p, A_Th_first,hov_text, "АААДИН")
 
 p <- add_lines(p=p,
                y = Av_usg,
@@ -152,3 +157,4 @@ p <- add_lines(p=p,
     p <- layout(p=p,
                 annotations = ucl_label)
 p
+

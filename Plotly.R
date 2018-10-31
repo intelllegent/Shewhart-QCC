@@ -92,8 +92,8 @@ p <- plot_ly(data = values_first,
 add_trash <- function(p, A_Th_first,hov_text, label) {
   pl <- add_markers(
     p = p,
-    x = A_Th_first$Date[1],
-    y = A_Th_first$Average_Thickness_nm[1],
+    x = A_Th_first$Date[1:3],
+    y = A_Th_first$Average_Thickness_nm[1:3],
     name = label,
     type = 'scatter',
     mode = 'lines+markers',
